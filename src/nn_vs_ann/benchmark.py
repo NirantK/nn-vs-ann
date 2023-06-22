@@ -217,7 +217,7 @@ def main(
 
 if __name__ == "__main__":
     # Benchmark Config
-    num_dims = 256
+    num_dims = 1536
     num_trials = 25
     size_range = [1_000, 10_000, 100_000, 1_000_000, 10_000_000]
     k = 10
