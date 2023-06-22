@@ -22,7 +22,7 @@ def main(results_file: Union[Path, str]):
     ax.set_xlabel("Time (s) (log scale)")
     ax.set_ylabel("Number of Embeddings")
     ax.set_yticklabels([f"{int(label.get_text()):,}" for label in ax.get_yticklabels()])
-    fig.suptitle("Top-k query time (k=5)")
+    fig.suptitle("Top-k query time (k=10)")
     fig.tight_layout()
 
     plt.savefig("assets/results.png", dpi=200)
