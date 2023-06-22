@@ -219,9 +219,21 @@ if __name__ == "__main__":
     # Benchmark Config
     num_dims = 1536
     num_trials = 25
-    size_range = [1_000, 10_000, 100_000, 1_000_000, 10_000_000]
-    k = 10
-
+    size_range = [1_000, 10_000, 100_000]
+    k = 3
     results = main(num_dims, k, num_trials, size_range)
     print(results)
-    results.to_csv(ROOT / "assets" / "results.csv", index=False)
+    results.to_csv(ROOT / "assets" / "results_k3_100K.csv", index=False)
+
+    size_range = [1_000, 10_000, 100_000]
+    # size_range = [1_000_000, 3_000_000, 5_000_000]
+    k = 10
+    results = main(num_dims, k, num_trials, size_range)
+    print(results)
+    results.to_csv(ROOT / "assets" / "results_k10_100K.csv", index=False)
+
+    size_range = [1_000_000, 3_000_000, 5_000_000]
+    k = 10
+    results = main(num_dims, k, num_trials, size_range)
+    print(results)
+    results.to_csv(ROOT / "assets" / "results_k10_5M.csv", index=False)
