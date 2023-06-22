@@ -8,13 +8,11 @@ This repo runs a quick benchmark for calculating nearest neighbors for embedding
 
 Time in seconds.
 
-| num_embeddings   |     hnswlib |       numpy |
-|:-----------------|------------:|------------:|
-| 1,000            | 3.95775e-05 | 9.23061e-05 |
-| 10,000           | 6.76441e-05 | 0.000368452 |
-| 100,000          | 0.000103912 | 0.00536784  |
-| 1,000,000        | 0.000141306 | 0.0546181   |
-| 10,000,000       | 0.000205708 | 0.465007    |
+| num_embeddings   |    hnswlib |     numpy |
+|:-----------------|-----------:|----------:|
+| 1,000,000        | 0.00274306 |  0.068801 |
+| 3,000,000        | 0.00312312 |  0.761944 |
+| 5,000,000        | 0.0030509  | 35.8056   |
 
 ![assets/results.png](assets/results.png)
 
